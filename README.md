@@ -68,8 +68,8 @@ A Tennis Court Rental System covers a lot of key skills in backend development:
 
 We’re handling user authentication, managing data relationships, creating secure API routes, and organizing complex data.
 
-This project is also a great example of how backend logic meets real-world application needs.
-In the end, the project will be a reliable, organized way to manage tennis court bookings, 
+This project is also a great example of how backend logic meets real-world application needs. In the end, 
+the project will be a reliable, organized way to manage tennis court bookings, 
 whether it’s for a small club or a larger facility looking to digitize their reservations.
 ---
 ### FUTURE IMPLEMENTATION 
