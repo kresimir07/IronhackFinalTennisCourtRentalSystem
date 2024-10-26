@@ -51,7 +51,8 @@ This means:
 Only authenticated users can book or view their reservations.
 Admin-only areas are protected, so no one without the right permissions can access sensitive actions.
 
-REST API Structure Since this is a backend-focused project, I’ll be setting up a REST API that follows best practices:
+Rest API Structure Since this is a backend-focused project, I’ll be setting up a REST API that follows best practices:
+
 For each of our entities — Users, Courts, and Bookings—there’ll be routes to Create, Read, Update, and Delete.<br><br>
 For example:
 GET /courts to list available courts <br>
