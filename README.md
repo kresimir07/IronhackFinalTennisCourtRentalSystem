@@ -54,7 +54,9 @@ Admin-only areas are protected, so no one without the right permissions can acce
 Rest API Structure Since this is a backend-focused project, I’ll be setting up a REST API that follows best practices:
 
 For each of our entities — Users, Courts, and Bookings—there’ll be routes to Create, Read, Update, and Delete.<br><br>
+
 For example:
+
 GET /courts to list available courts <br>
 POST /bookings to make a reservation <br>
 PUT /bookings/{id} to modify a booking <br>
@@ -65,6 +67,7 @@ DELETE /bookings/{id} to cancel a booking.
 A Tennis Court Rental System covers a lot of key skills in backend development:
 
 We’re handling user authentication, managing data relationships, creating secure API routes, and organizing complex data.
+
 This project is also a great example of how backend logic meets real-world application needs.
 In the end, the project will be a reliable, organized way to manage tennis court bookings, 
 whether it’s for a small club or a larger facility looking to digitize their reservations.
