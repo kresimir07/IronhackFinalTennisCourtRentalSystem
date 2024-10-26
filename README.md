@@ -52,13 +52,12 @@ Only authenticated users can book or view their reservations.
 Admin-only areas are protected, so no one without the right permissions can access sensitive actions.
 
 REST API Structure Since this is a backend-focused project, I’ll be setting up a REST API that follows best practices:
-For each of our entities — Users, Courts, and Bookings—there’ll be routes to Create, Read, Update, and Delete.
-
+For each of our entities — Users, Courts, and Bookings—there’ll be routes to Create, Read, Update, and Delete.<br><br>
 For example:
-GET /courts to list available courts
-POST /bookings to make a reservation
-PUT /bookings/{id} to modify a booking
-DELETE /bookings/{id} to cancel a booking.
+GET /courts to list available courts <br>
+POST /bookings to make a reservation <br>
+PUT /bookings/{id} to modify a booking <br>
+DELETE /bookings/{id} to cancel a booking. 
 ---
 ### WHY THIS PROJECT ?
 
@@ -116,6 +115,7 @@ whether it’s for a small club or a larger facility looking to digitize their r
    Methods: <br>
    checkAvailability(date: Date, timeSlot: String) <br>
    calculatePrice(duration: int): Double <br>
+
 ### Booking
    Attributes: <br>
    id: Long <br>
