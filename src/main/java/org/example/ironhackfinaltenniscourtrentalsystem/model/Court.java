@@ -25,6 +25,12 @@ public class Court {
     @Column(nullable = false)
     private String surfaceType; //  "Clay", "Grass", "Hard" - will be probably created as Enum
 
+    public Court(String courtNumber, String surfaceType, boolean isIndoor) {
+        this.courtNumber = courtNumber;
+        this.surfaceType = surfaceType;
+        this.isIndoor = isIndoor;
+    }
+
     @Column(nullable = false)
     private boolean isIndoor; // True equals indoor, false equals outdoor
 

@@ -31,6 +31,10 @@ public class Booking {
     @Column(nullable = false)
     private String courtNumber;
 
-
-    // Additional fields,to be added later such as booking status, payment info
+    public Booking(LocalDateTime startTime, LocalDateTime endTime, String courtNumber) {
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.courtNumber = courtNumber;
+    }
+// Additional fields,to be added later such as booking status, payment info
 }
