@@ -23,9 +23,9 @@ public class Court {
     private String courtNumber;
 
     @Column(nullable = false)
-    private String surfaceType; //  "Clay", "Grass", "Hard" - will be probably created as Enum
+    private SurfaceType surfaceType; //  "Clay", "Grass", "Hard" - will be probably created as Enum
 
-    public Court(String courtNumber, String surfaceType, boolean isIndoor) {
+    public Court(String courtNumber, SurfaceType surfaceType, boolean isIndoor) {
         this.courtNumber = courtNumber;
         this.surfaceType = surfaceType;
         this.isIndoor = isIndoor;
