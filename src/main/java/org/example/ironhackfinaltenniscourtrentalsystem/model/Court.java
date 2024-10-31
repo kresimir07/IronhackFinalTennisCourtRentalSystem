@@ -24,14 +24,12 @@ public class Court {
     @Column(nullable = false, unique = true)
     private String courtNumber;
 
+
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private SurfaceType surfaceType; //  "Clay", "Grass", "Hard" - will be probably created as Enum
 
-    public Court(String courtNumber, SurfaceType surfaceType, boolean isIndoor) {
-        this.courtNumber = courtNumber;
-        this.surfaceType = surfaceType;
-        this.isIndoor = isIndoor;
-    }
+
 
     @Column(nullable = false)
     private boolean isIndoor; // True equals indoor, false equals outdoor
@@ -39,5 +37,10 @@ public class Court {
     @OneToMany(mappedBy = "court", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Booking> bookings;
 
+    public Court(String courtNumber, SurfaceType surfaceType, boolean isIndoor) {
+        this.courtNumber = courtNumber;
+        this.surfaceType = surfaceType;
+        this.isIndoor = isIndoor;
+    }
 
 }
