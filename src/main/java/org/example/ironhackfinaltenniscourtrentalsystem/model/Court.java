@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 
 @Entity
 @Table(name = "courts")
@@ -33,6 +35,9 @@ public class Court {
 
     @Column(nullable = false)
     private boolean isIndoor; // True equals indoor, false equals outdoor
+
+    @OneToMany(mappedBy = "court", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Booking> bookings;
 
 
 }

@@ -1,6 +1,5 @@
 package org.example.ironhackfinaltenniscourtrentalsystem.service;
 
-import jakarta.persistence.Id;
 import org.example.ironhackfinaltenniscourtrentalsystem.model.Booking;
 import org.example.ironhackfinaltenniscourtrentalsystem.model.User;
 import org.example.ironhackfinaltenniscourtrentalsystem.repository.BookingRepository;
@@ -24,23 +23,26 @@ public class BookingService {
         return bookingRepository.findAll();
     }
 
-//    public List<Booking> getBookingByUser(String email) {
-//        User user = userRepository.findByEmail(email)
-//                .orElseThrow(() -> new RuntimeException("Bookings for user with email " + email + " not found"));
-//        return bookingRepository.findByUser(user);
-//    }
+    public List<Booking> getBookingsByUser(User user) {
+        return bookingRepository.findByUser(user);
+    }
+
+    public List<Booking> getBookingByUser(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Bookings for user with email " + email + " not found"));
+        return bookingRepository.findByUser(user);
+    }
 
     public Booking createBooking(Booking booking) {
         return bookingRepository.save(booking);
     }
 
-//    public void deleteBooking(String email) {
-//        Booking bookingToDelete = bookingRepository.findByEmail(email)
-//                .orElseThrow(() -> new RuntimeException("Booking for user with email " + email + " not found"));
-//
-//        userRepository.delete(email);
-//
-//    }
+    public void deleteBooking(Long id) {
+        Booking booking = bookingRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Booking not found"));
+
+        bookingRepository.delete(booking);
+    }
 
 //    TODO Fix getBookingByUser
 //    TODO fix deletBookingbyEmail

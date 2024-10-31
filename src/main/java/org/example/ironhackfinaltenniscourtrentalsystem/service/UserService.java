@@ -21,7 +21,7 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-    public User rgisterUser(User user) {
+    public User registerUser(User user) {
         return userRepository.save(user);
     }
 
@@ -42,4 +42,6 @@ public class UserService {
 
         userRepository.delete(user);
     }
+
+
 }

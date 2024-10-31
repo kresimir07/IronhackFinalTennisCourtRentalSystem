@@ -31,6 +31,14 @@ public class Booking {
     @Column(nullable = false)
     private String courtNumber;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "court_id", nullable = false)
+    private Court court;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
     public Booking(LocalDateTime startTime, LocalDateTime endTime, String courtNumber) {
         this.startTime = startTime;
         this.endTime = endTime;
